@@ -1,0 +1,15 @@
+---
+- name: Hello Events
+  hosts: all
+  ## Define our source for events
+  sources:
+    - benthomasson.eda.range:
+        limit: 5
+  ## Define the conditions we are looking for
+  rules:
+    - name: Say Hello
+      condition: event.i == 1
+      ## Define the action we should take should the condition be met
+      action:
+        run_playbook:
+          name: benthomasson.eda.hello
