@@ -20,7 +20,7 @@
           job_args:
             extra_vars:
                message: from eda
-               sleep: 1
+               sleep: 30
 
     - name: Web site is down
       condition: event.url_check.status == "down"
@@ -32,4 +32,4 @@
           job_args:
             extra_vars:
                message: from eda
-               sleep: 1
+               sleep: 5
