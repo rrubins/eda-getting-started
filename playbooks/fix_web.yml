@@ -7,7 +7,10 @@
   tasks:
     - debug:
         msg: "Website is down!"
-
+    - name: Restart service
+      service:
+       name: httpd
+       state: started
     - name: Replace website
       copy:
        remote_src: yes
