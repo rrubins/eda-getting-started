@@ -16,5 +16,5 @@
       ## Define the action we should take should the condition be met
       action:
         run_job_template:
-          name: say-what.yml
+          name: say-what
 
