@@ -17,4 +17,7 @@
       action:
         run_job_template:
           name: say-what
-
+          organization: "LDAP Organization"
+          job_args:
+            extra_vars:
+               message: from eda
