@@ -7,7 +7,7 @@
         host: servera.aap.example.com
         port: 9092
         topic: eda
-        group_id: testing
+        group_id:
 
   ## Define the conditions we are looking for
   rules:
