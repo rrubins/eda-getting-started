@@ -2,7 +2,7 @@
 - name: Read messages from a kafka topic and act on them
   hosts: all
   ## Define our source for events
-  sources:   
+  sources:
     - ansible.eda.kafka:
         host: servera.aap.example.com
         port: 9092
