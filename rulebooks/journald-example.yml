@@ -1,6 +1,6 @@
 ---
 - name: Read journald system messages and act on them
-  hosts: web
+  hosts: all
   sources:
     - name: Match all messages
       ansible.eda.journald:
