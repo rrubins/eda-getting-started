@@ -6,8 +6,8 @@
     - ansible.eda.kafka:
         host: servera.aap.example.com
         port: 9092
-        topic: eda-topic
-        group_id:
+        topic: eda
+        group_id: testing
 
   ## Define the conditions we are looking for
   rules:
