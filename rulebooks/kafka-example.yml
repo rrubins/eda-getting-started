@@ -4,7 +4,7 @@
   ## Define our source for events
   sources:   
     - ansible.eda.kafka:
-        host: 172.20.50.180
+        host: servera.aap.example.com
         port: 9092
         topic: eda-topic
         group_id:
