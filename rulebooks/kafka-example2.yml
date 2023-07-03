@@ -1,0 +1,18 @@
+---
+- name: Read messages from a kafka topic and act on them
+  hosts: all
+  sources:
+    - ansible.eda.kafka:
+      host: servera.aap.example.com
+      port: 9092
+      topic: eda
+      group_id:
+
+  rules:
+    - name: Say Hello
+      condition: event.message == "Ansible is cool"
+      ## Define the action we should take should the condition be met
+      action:
+        run_job_template:
+          name: say-what
+          organization: "LDAP Organization"
