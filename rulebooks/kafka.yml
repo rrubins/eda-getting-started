@@ -10,11 +10,7 @@
         group_id: eda-group
   rules:
     - name: Check defined
-      condition: event.message != ""
+      condition: event.message == "hello"
       action:
         debug:
-    - name: Stop
-      condition: event.body == stop
-      action:
-        shutdown:
 
