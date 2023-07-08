@@ -4,16 +4,17 @@
   sources:
     - name: kafka
       ansible.eda.kafka:
-        topic: eda
         host: servera.aap.example.com
         port: 9092
-        group_id: testing
+        topic: eda-topic
+        group_id: eda-group
   rules:
     - name: Check defined
-      condition: event.body.i is defined
+      condition: event.message != ""
       action:
         debug:
     - name: Stop
       condition: event.body == stop
       action:
         shutdown:
+
