@@ -3,11 +3,11 @@
   hosts: all
   sources:
     - name: kafka
-        ansible.eda.kafka:
-          host: servera.aap.example.com
-          port: 9092
-          topic: eda
-          group_id:
+      ansible.eda.kafka:
+        host: servera.aap.example.com
+        port: 9092
+        topic: eda
+        group_id:
   rules:
     - name: Say Hello
       condition: event.message == "Ansible is cool"
