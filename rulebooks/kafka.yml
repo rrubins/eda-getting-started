@@ -9,8 +9,14 @@
         topic: eda-topic
         group_id: eda-group
   rules:
-    - name: Check defined
+    - name: Check for hello message
       condition: event.message == "hello"
       action:
         debug:
 
+    - name: Say Hello
+      condition: event.message == "Ansible is cool"
+      action:
+        run_job_template:
+          name: say-what
+          organization: "LDAP Organization"
