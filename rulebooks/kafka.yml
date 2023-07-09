@@ -2,8 +2,7 @@
 - name: Demo rules with kafka as source
   hosts: all
   sources:
-    - name: kafka
-      ansible.eda.kafka:
+    - ansible.eda.kafka:
         host: servera.aap.example.com
         port: 9092
         topic: eda-topic
@@ -11,7 +10,7 @@
 
   rules:
     - name: Say Hello
-      condition: event.msg == "Ansible is cool"
+      condition: event.message == "Ansible is cool"
       action:
         run_job_template:
           name: say-what
