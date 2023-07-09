@@ -8,14 +8,10 @@
         port: 9092
         topic: eda-topic
         group_id: eda-group
-  rules:
-    - name: Check for hello message
-      condition: event.message == "hello"
-      action:
-        debug:
 
+  rules:
     - name: Say Hello
-      condition: event.message == "Ansible is cool"
+      condition: event.msg == "Ansible is cool"
       action:
         run_job_template:
           name: say-what
