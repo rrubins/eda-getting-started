@@ -3,9 +3,10 @@
   hosts: all
   sources:
     - ansible.eda.kafka:
-        host: localhost
-        port: 9091
+        host: servera.aap.example.com
+        port: 9092
         topic: eda-topic
+        group_id: ""
 
   rules:
     - name: Say Hello
