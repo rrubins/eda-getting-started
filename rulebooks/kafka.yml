@@ -6,7 +6,6 @@
         host: servera.aap.example.com
         port: 9092
         topic: eda-topic
-        group_id: eda-group
 
   rules:
     - name: Say Hello
