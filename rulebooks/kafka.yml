@@ -10,7 +10,7 @@
 
   rules:
     - name: Say Hello
-      condition: event.body.message != ""
+      condition: event.body.message == "Ansible is cool"
       action:
         run_job_template:
           name: say-what
